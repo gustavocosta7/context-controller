@@ -4,7 +4,7 @@
     "description": "Controlador de contextos do chatbot Assistente Colaborador",
     "main": "index.js",
     "scripts": {
-        "start": "node ./dist/server.js",
+        "start": "node ./build/server.js",
         "build": "tsc",
         "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
         "test": "jest --detectOpenHandles"
