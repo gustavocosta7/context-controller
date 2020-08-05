@@ -24,7 +24,7 @@ contextRouter.post('/', (req, res) => {
 
 contextRouter.delete('/', (req, res) => {
     const result = contextController.delete(req)
-    res.send({"message": result})
+    res.send({"messagem": result})
 
 })
 
