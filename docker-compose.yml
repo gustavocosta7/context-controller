@@ -1,14 +1,13 @@
 version: "3.7"
  
 services:
-  node-ts-otimizado:
+  colab-context:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: example-web-server
+    container_name: colab-context
     volumes:
       - ./src:/app/src
     ports:
-      - "3000:8080"
-      - "8181:8181"
+      - "3000:3000"
     command: npm run dev

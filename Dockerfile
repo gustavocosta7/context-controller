@@ -1,15 +1,11 @@
 FROM node:12-alpine
- 
-WORKDIR /home/node/app
- 
-ADD . .
- 
+
+WORKDIR /usr/app
+
 ENV NODE_ENV=production
- 
-RUN npm ci
- 
-USER node
- 
-EXPOSE 8080
- 
-CMD [ "node", "build/server.js" ]
+
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+CMD [ "npm", "start" ]
